@@ -1,0 +1,17 @@
+type Movie {
+  id: Int!
+  name: String!
+  score: Int!
+}
+
+type Query {
+  movies: [Movie]!
+  movie(id: Int!): Movie
+}
+
+#Mutation: Database 상태가 변했을 때 사용된다.
+
+type Mutation {
+  addMovie(score: Int!, name: String!): Movie!
+  deleteMovie(id: Int!): Boolean!
+}
